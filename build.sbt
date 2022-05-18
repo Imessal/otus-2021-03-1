@@ -12,3 +12,7 @@ lazy val root = project.in(file("."))
   .settings(libraryDependencies ++= Dependencies.all)
   .settings(BuildSettings.helpersSettings)
 
+
+// SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder"
+// workaround for missing static SLF4J binder for logback
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
